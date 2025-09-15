@@ -52,4 +52,3 @@ print(cars.loc[cars['Model'] == 'Camaro Z28', ['cyl']])
 print("\nd) Cylinders and gear type of Mazda RX4 Wag, Ford Pantera L, Honda Civic:\n")
 cars_model = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic']
 print(cars.loc[cars['Model'].isin(cars_model), ['cyl', 'gear']])
-```
