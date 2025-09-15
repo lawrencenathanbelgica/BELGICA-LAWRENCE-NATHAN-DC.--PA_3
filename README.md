@@ -27,7 +27,13 @@ print(cars.head())
 print(cars.tail())
 ```
 
-##  Problem 2: `Surname_Pandas-P2.py`
+## Problem 2: `Surname_Pandas-P2.py`
+
+This script performs **data extraction and filtering** from the `cars.csv` dataset using **Pandas subsetting, slicing, and indexing**.
+
+---
+
+### Full Code
 
 ```python
 import pandas as pd
@@ -47,7 +53,7 @@ print(cars.loc[cars['Model'] == 'Mazda RX4'])
 print("\nc) Cylinders of Camaro Z28:\n")
 print(cars.loc[cars['Model'] == 'Camaro Z28', ['cyl']])
 
-# d) Determine how many cylinders ('cyl') and what gear type ('gear') 
+# d) Determine how many cylinders ('cyl') and what gear type ('gear')
 # do the car models 'Mazda RX4 Wag', 'Ford Pantera L', and 'Honda Civic' have
 print("\nd) Cylinders and gear type of Mazda RX4 Wag, Ford Pantera L, Honda Civic:\n")
 cars_model = ['Mazda RX4 Wag', 'Ford Pantera L', 'Honda Civic']
