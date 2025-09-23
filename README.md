@@ -5,6 +5,7 @@
 
 This repository contains solutions for two problems using **Python Pandas** to manipulate and analyze a dataset of cars (`cars.csv`).  
 
+The purpose of this assignment is to practice data manipulation and extraction using Pandas, focusing on subsetting, slicing, and indexing operations with the Cars dataset (`cars.csv`).
 ---
 
 ## Problem 1: `Surname_Pandas-P1.py`  
@@ -35,9 +36,14 @@ This script performs **data extraction and filtering** from the `cars.csv` datas
 #### 1. Import Pandas and Load Dataset
 ```python
 import pandas as pd
-
-cars = pd.read_csv('cars.csv')
 ```
+→ Imports the Pandas library for handling tabular data.
+
+```python
+cars = pd.read_csv('cars.csv')
+``` 
+→ Loads the `cars.csv` file into a DataFrame named `cars`.
+
 ### 2. Row Containing "Mazda RX4"
 
 **Goal:**  
@@ -50,7 +56,7 @@ Use `.loc[]` to filter rows where the column `Model` is `Mazda RX4`.
 ```python
 print(cars.loc[cars['Model'] == 'Mazda RX4'])
 ```
-
+→ `.loc[]` is used to select rows where the `Model` column equals `"Mazda RX4"`.
 ### 3. Cylinders of "Camaro Z28"
 
 **Goal:**  
@@ -83,3 +89,20 @@ Determine how many cylinders (`cyl`) and what gear type (`gear`) the following c
 ```python
 cars_model = ['Mazda RX4', 'Ford Pantera L', 'Honda Civic']
 print(cars.loc[cars['Model'].isin(cars_model), ['cyl', 'gear']])
+```
+
+## How to Run the Programs  
+
+1. Ensure the dataset **`cars.csv`** is in the same folder as the Python files.  
+2. Run each script using:  
+
+```python
+   python Surname_Pandas-P1.py
+   python Surname_Pandas-P2.py
+```
+Check the terminal for outputs:
+
+- Problem 1: Displays the first and last 5 rows of the dataset.
+- Problem 2: Displays results for Mazda RX4, Camaro Z28, and selected models.
+
+
